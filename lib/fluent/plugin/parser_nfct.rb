@@ -80,7 +80,8 @@ module Fluent
              end
            end
          end
-         yield convert_values(parse_time(r), r)
+         time, value = convert_values(parse_time(r), r)
+         yield time, value
        end
     end
   end
